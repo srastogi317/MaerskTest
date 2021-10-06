@@ -5,15 +5,15 @@ import java.util.Scanner;
 public class PromotionEngine {
 
     public static void main(String arg[]) {
-        int total=0;
-       total  = CartListWithPromotion(total);
-        System.out.println(total);
+
+      int totalAmount  = CartListWithPromotion();
+        System.out.println(totalAmount);
 
 
     }
 
-    private static int CartListWithPromotion(int total) {
-
+    private static int CartListWithPromotion() {
+int total = 0;
         Utility util = new Utility();
         System.out.println("A price is 50" + '\n' + "B price is 30" + '\n' + "C price is 20" + '\n' + "D price is 15");
         System.out.println("Promotion Offers 1-" + '\n' + "3A's for 130" + '\n' + "2B's for 45" + '\n' + "C+D for 30");
@@ -44,7 +44,7 @@ public class PromotionEngine {
             }
         } catch (Exception e) {
             System.out.println("Invalid quantity! Please enter a number");
-            CartListWithPromotion(total);
+            CartListWithPromotion();
         }
         return total;
     }
