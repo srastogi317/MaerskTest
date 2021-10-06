@@ -4,8 +4,8 @@ public class Utility {
 
 //for promotion offer 1
     public int calculateSKUCost1(int aQty, int bQty, int cQty, int dQty, Map<String, Integer> price) {
-        int total = calculatePriceOfAItem(aQty, price) + calculatePriceOfBItem(bQty, price) + calculatePriceOfCDItem(cQty, dQty, price);
-        return total;
+        return calculatePriceOfAItem(aQty, price) + calculatePriceOfBItem(bQty, price) + calculatePriceOfCDItem(cQty, dQty, price);
+
     }
 
     private static int calculatePriceOfCDItem(int cqty, int dqty, Map<String, Integer> price) {
@@ -24,7 +24,7 @@ public class Utility {
 
             }
         }
-        System.out.println("CD price is:" + cdPrice);
+        System.out.println("C,D price is:" + cdPrice);
         return cdPrice;
     }
 
@@ -62,7 +62,7 @@ public class Utility {
     }
     //for promotion offer 2
     public int calculateSKUCost2(int aQty, int bQty, int cQty, int dQty, Map<String, Integer> price) {
-        int total=aQty*price.get("A")-((aQty*price.get("A"))*40/100)+bQty*price.get("B")+cQty*price.get("C")+dQty*price.get("D");
-    return total;
+         return aQty*price.get("A")-((aQty*price.get("A"))*40/100)+bQty*price.get("B")+cQty*price.get("C")+dQty*price.get("D");
+
     }
 }
